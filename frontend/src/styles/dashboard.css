@@ -1,0 +1,266 @@
+/* ===========================
+   DASHBOARD
+=========================== */
+
+.dashboard {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at top right, #1d4ed8 0%, transparent 25%),
+    radial-gradient(circle at bottom left, #7c3aed 0%, transparent 20%),
+    #0f172a;
+
+  color: white;
+}
+
+.dashboard-container {
+  max-width: 1650px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-left h1 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.header-left p {
+  color: #94a3b8;
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: #16a34a;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: #15803d;
+  transform: translateY(-2px);
+}
+
+.primary-btn:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+.primary-btn:disabled:hover {
+  transform: none;
+  background: #2563eb;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  grid-template-areas:
+    "mission productivity"
+    "tasks timeline"
+    "coach coach";
+
+  gap: 18px;
+}
+
+.mission {
+  grid-area: mission;
+}
+
+.productivity {
+  grid-area: productivity;
+}
+
+.tasks {
+  grid-area: tasks;
+}
+
+.timeline {
+  grid-area: timeline;
+}
+
+.coach {
+  grid-area: coach;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.dashboard-card {
+  background: #1e293b;
+  border-radius: 18px;
+  border: 1px solid #334155;
+  padding: 20px;
+  overflow: hidden;
+  transition: .25s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0,0,0,.25);
+}
+
+/* ===========================
+   HEIGHTS
+=========================== */
+
+.mission {
+  height: 240px;
+}
+
+.productivity {
+  height: 240px;
+}
+
+.tasks,
+.timeline {
+  height: 430px;
+  overflow-y: auto;
+}
+
+.coach {
+  height: 220px;
+}
+
+/* ===========================
+   PRODUCTIVITY SCORE
+=========================== */
+
+.score-card {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.score-card h3 {
+  color: white;
+}
+
+.score-value {
+
+  font-size: 64px;
+
+  font-weight: bold;
+
+  color: #3b82f6;
+
+  margin: 18px 0;
+}
+
+.score-card p {
+  color: #94a3b8;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+.tasks::-webkit-scrollbar,
+.timeline::-webkit-scrollbar {
+  width: 7px;
+}
+
+.tasks::-webkit-scrollbar-thumb,
+.timeline::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 20px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:1100px){
+
+  .dashboard-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+  }
+
+  .dashboard-grid{
+
+    grid-template-columns:1fr;
+
+    grid-template-areas:
+      "mission"
+      "productivity"
+      "tasks"
+      "timeline"
+      "coach";
+
+  }
+
+  .mission,
+  .productivity,
+  .tasks,
+  .timeline,
+  .coach{
+    height:auto;
+    min-height:250px;
+  }
+
+}
+
+@media (max-width:700px){
+
+  .dashboard-container{
+    padding:20px;
+  }
+
+  .header-right{
+    flex-direction:column;
+    width:100%;
+  }
+
+  .primary-btn,
+  .secondary-btn{
+    width:100%;
+  }
+
+}

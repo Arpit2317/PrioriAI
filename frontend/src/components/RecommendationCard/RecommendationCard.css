@@ -1,0 +1,120 @@
+.recommendation-card {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: #f8fafc;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.recommendation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.recommendation-badge {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.live-indicator {
+  color: #22c55e;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* ===========================
+   Title
+=========================== */
+
+.mission-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  line-height: 1.35;
+
+  margin-bottom: 14px;
+}
+
+/* ===========================
+   Description
+=========================== */
+
+.mission-reason {
+  color: #94a3b8;
+
+  line-height: 1.7;
+
+  font-size: 15px;
+
+  flex: 1;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+.mission-footer {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 22px;
+
+  flex-wrap: wrap;
+}
+
+.mission-tag {
+  background: #2563eb;
+
+  color: white;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.mission-tag.secondary {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 768px) {
+
+  .mission-title {
+    font-size: 1.3rem;
+  }
+
+  .mission-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}

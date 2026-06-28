@@ -1,0 +1,57 @@
+.productivity-card{
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    text-align:center;
+}
+
+.productivity-header h3{
+    font-size:18px;
+    color:#cbd5e1;
+}
+
+.score-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+.score-circle{
+
+    width:110px;
+    height:110px;
+
+    border:6px solid #3b82f6;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:34px;
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.score-circle:hover{
+    transform:scale(1.05);
+}
+
+.score-status{
+    font-size:22px;
+}
+
+.score-description{
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+    line-height:1.6;
+}

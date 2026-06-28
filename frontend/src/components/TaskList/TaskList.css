@@ -1,0 +1,181 @@
+.task-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #f8fafc;
+}
+
+/* ==========================
+   Header
+========================== */
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.task-header h2 {
+  font-size: 22px;
+}
+
+.task-count {
+  background: #334155;
+  color: #cbd5e1;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ==========================
+   Scrollable Area
+========================== */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 5px;
+}
+
+.task-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 20px;
+}
+
+/* ==========================
+   Task Item
+========================== */
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px;
+
+  border-radius: 14px;
+
+  background: #334155;
+
+  border: 1px solid transparent;
+
+  transition: all .25s ease;
+}
+
+.task-item:hover {
+  background: #3b485c;
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+/* Left Side */
+
+.task-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  flex: 1;
+}
+
+/* Checkbox */
+
+.task-left input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #2563eb;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+/* Task Info */
+
+.task-info h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: white;
+  transition: .25s;
+}
+
+.task-meta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.deadline,
+.duration {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* ==========================
+   Completed Task
+========================== */
+
+.task-item.completed {
+  opacity: .55;
+}
+
+.task-item.completed h4 {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.task-item.completed .deadline,
+.task-item.completed .duration {
+  color: #64748b;
+}
+
+/* ==========================
+   Priority
+========================== */
+
+.priority {
+  min-width: 80px;
+  text-align: center;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+
+.priority.high {
+  background: #ef4444;
+}
+
+.priority.medium {
+  background: #f59e0b;
+}
+
+.priority.low {
+  background: #10b981;
+}
+
+/* ==========================
+   Empty State
+========================== */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.empty-state p {
+  margin-top: 10px;
+  font-size: 14px;
+}

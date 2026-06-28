@@ -1,0 +1,178 @@
+.timeline-card {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #f8fafc;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.timeline-header h2 {
+  font-size: 22px;
+}
+
+.timeline-badge {
+  background: #334155;
+  color: #cbd5e1;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* ===========================
+   Scroll Area
+=========================== */
+
+.timeline-list {
+  flex: 1;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  padding-right: 5px;
+}
+
+.timeline-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.timeline-list::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 20px;
+}
+
+/* ===========================
+   Timeline Item
+=========================== */
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 18px;
+
+  background: #334155;
+
+  border-radius: 14px;
+
+  padding: 16px;
+
+  transition: all .25s ease;
+
+  border: 1px solid transparent;
+}
+
+.timeline-item:hover {
+  background: #3b485c;
+
+  border-color: #3b82f6;
+
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   Time
+=========================== */
+
+.timeline-time {
+  min-width: 70px;
+
+  font-weight: 700;
+
+  color: #60a5fa;
+
+  font-size: 15px;
+}
+
+/* ===========================
+   Divider
+=========================== */
+
+.timeline-divider {
+  width: 3px;
+
+  align-self: stretch;
+
+  background: #3b82f6;
+
+  border-radius: 20px;
+}
+
+/* ===========================
+   Content
+=========================== */
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-content h4 {
+  font-size: 16px;
+
+  margin-bottom: 6px;
+
+  color: white;
+}
+
+.timeline-content p {
+  color: #94a3b8;
+
+  font-size: 13px;
+}
+
+/* ===========================
+   Empty State
+=========================== */
+
+.timeline-empty {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  color: #94a3b8;
+}
+
+.empty-icon {
+  font-size: 46px;
+
+  margin-bottom: 15px;
+}
+
+.timeline-empty h3 {
+  color: white;
+
+  margin-bottom: 10px;
+}
+
+.timeline-empty p {
+  line-height: 1.6;
+
+  max-width: 250px;
+}
